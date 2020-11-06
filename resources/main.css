@@ -1,0 +1,24 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+	font-family: 'Montserrat','Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+	list-style-type: none;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
