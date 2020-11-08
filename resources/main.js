@@ -18,13 +18,12 @@ $(function() {
                 productsContentWrapper.append(productsHMTL);
         }   
 
-        // productsContentWrapper.delegate('.single-product-wrapper', "click", function() {
-        //   imgWrapper.css({backgroundImage: "url(assets/" + $(this).data('img') + ")"})
-        //           overlay.fadeIn();
-        //       });
+        productsContentWrapper.delegate('.single-product-wrapper', "click", function() {
+          imgWrapper.css({backgroundImage: "url(assets/" + $(this).data('img') + ")"})
+                  overlay.fadeIn();
+              });
           
-        //       overlay.click(function() {
-        //           $(this).fadeOut();
-        //       });
-        //   });
+              overlay.click(function() {
+                  $(this).fadeOut();
+              });
 });
