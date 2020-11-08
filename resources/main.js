@@ -5,10 +5,10 @@ $(function() {
   const singleProductWrapper = $('.single-product-wrapper')
   const getproductsHTML = function(productsObj) {
       return `<div class="single-product-wrapper" data-id=${productsObj.id}>
-                <div class="product-image-wrapper" style="background-image: url(assets/products/${productsObj.imgUrl})"></div>
+                <div class="product-image-wrapper" style="background-image: url(assets/coats/${productsObj.imgUrl})"></div>
                 <div class="product-info-wrapper">
                     <div class="description-wrapper">${productsObj.name}</div>
-                    <div class="price-wrapper">${productsObj.curency} ${productsObj.price}</div>
+                    <div class="price-wrapper">${productsObj.currency} ${productsObj.price}</div>
                </div> `;
   };
 
