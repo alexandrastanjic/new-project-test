@@ -1,8 +1,9 @@
 $(function() {
   const productsContentWrapper = $('.product-main-wrapper');
+  const singleProductWrapper = $('.single-product-wrapper');
+  const imgWrapper = $('.img-wrapper');
+  const overlay = $('.overlay');
   const coatsArr = products.coats;
-  console.log(products);
-  const singleProductWrapper = $('.single-product-wrapper')
   const getproductsHTML = function(productsObj) {
       return `<div class="single-product-wrapper" data-id=${productsObj.id}>
                 <div class="product-image-wrapper" style="background-image: url(assets/coats/${productsObj.imgUrl})"></div>
@@ -19,7 +20,7 @@ $(function() {
         }   
 
         productsContentWrapper.delegate('.single-product-wrapper', "click", function() {
-          imgWrapper.css({backgroundImage: "url(assets/" + $(this).data('img') + ")"})
+          imgWrapper.css({style: "url(assets/coats" + $(this).data('img') + ")"})
                   overlay.fadeIn();
               });
           
