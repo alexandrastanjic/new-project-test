@@ -18,6 +18,8 @@ $(function() {
 				productsContentWrapper.append(productsHMTL);
 	}
 
+	// atentie ca nu ai definit overlay si imgWrapper aici, ai eroare in consola, pentru un eventual interviu mare atentie aici
+	// poti sa te ocupi de chestiile simple ca sa completezi flow-ul, de exemplu overvay, icon-close, acestea aduc puncte frumoase
 	productsContentWrapper.delegate('.single-product-wrapper', "click", function() {
 	  imgWrapper.css({backgroundImage: "url(assets/" + $(this).data('img') + ")"})
 	          overlay.fadeIn();
