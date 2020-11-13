@@ -4,11 +4,6 @@ $(function() {
 	const overlay = $('.overlay');
 	const coatsArr = products.coats;
 	const btnClose = $('#btnClose');
-	const itemName = $('.item-name-wrapper');
-	const itemPrice = $('.item-price-wrapper');
-	const itemComposition = $('replace-composition');
-	const itemCountry = $('.replace-country');
-	const itemCare = $('.replace-care');
 	const getproductsHTML = function(index, productsObj) {
 		return `<div class="single-product-wrapper" data-id=${productsObj.id} data-index=${index}>
                 <div class="product-image-wrapper" style="background-image: url(assets/coats/${productsObj.imgUrl})"></div>
@@ -29,11 +24,11 @@ $(function() {
 		const index = $(this).data('index');
 		const replaceInfo = products.coats[index];
 		imgWrapper.css({ backgroundImage: `url(assets/coats/coat-${id}.jpg)` });
-		itemName.text(replaceInfo.name);
-		itemPrice.text(replaceInfo.currency + replaceInfo.price);
-		itemComposition.text(replaceInfo.composition);
-		itemCountry.text(replaceInfo.country);
-		itemCare.text(replaceInfo.care);
+		$('.item-name-wrapper').text(replaceInfo.name);
+		$('.item-price-wrapper').text(replaceInfo.currency + replaceInfo.price);
+		$('item-composition-wrapper div').text(replaceInfo.composition);
+        $('.item-country-wrapper div').text(replaceInfo.country);
+		$('.item-care-wrapper div').text(replaceInfo.care);
 		overlay.fadeIn();
 	});
 
