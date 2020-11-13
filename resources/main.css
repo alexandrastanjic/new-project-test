@@ -222,6 +222,11 @@ nav a.highlighted {
 	background-size: contain;
 }
 
+.item-name-wrapper  {
+	font-size: 20px;
+	font-weight: 700;
+}
+
 .info-wrapper {
 	position: absolute;
 	top: 190px;
@@ -231,6 +236,7 @@ nav a.highlighted {
 	width: 100%;
 	border-radius: 30px;
 	padding: 20px 20px;
+	font-size: 14px;
 }
 
 .item-size-wrapper {
@@ -264,8 +270,8 @@ nav a.highlighted {
 
 .item-options-wrapper > div {
 	display: flex;
-	height: 50px;
-	width: 100px;
+	height: 45px;
+	width: 85px;
 	background-color: #e7e8e9;
 	border-radius: 25px;
 }
@@ -335,3 +341,4 @@ nav a.highlighted {
 	width: auto;
 	padding: 20px;
 }
+
