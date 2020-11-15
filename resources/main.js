@@ -14,7 +14,9 @@ $(function() {
 	};
 
 	for (let i = 0; i < coatsArr.length; i++) {
+		// sugestie de naming: coatsObj, pentru ca e doar o sectiune din products
 		let productsObj = coatsArr[i];
+		// o mica sugestie de naming aici, getProductHTML, folosind singularul e mai corect, pentru ca genereaza HTML pentru un singur produs  pe rand
 		let productsHMTL = getproductsHTML(i, productsObj);
 		productsContentWrapper.append(productsHMTL);
 	}
