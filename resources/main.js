@@ -2,8 +2,9 @@ $(function() {
 	const productsContentWrapper = $('.product-main-wrapper');
 	const imgWrapper = $('.img-wrapper');
 	const overlay = $('.overlay');
-	const coatsArr = products.coats;
+	const coatsObj = products.coats;
 	const btnClose = $('#btnClose');
+
 	const getproductsHTML = function(index, productsObj) {
 		return `<div class="single-product-wrapper" data-id=${productsObj.id} data-index=${index}>
                 <div class="product-image-wrapper" style="background-image: url(assets/coats/${productsObj.imgUrl})"></div>
@@ -13,12 +14,10 @@ $(function() {
                </div> `;
 	};
 
-	for (let i = 0; i < coatsArr.length; i++) {
-		// sugestie de naming: coatsObj, pentru ca e doar o sectiune din products
-		let productsObj = coatsArr[i];
-		// o mica sugestie de naming aici, getProductHTML, folosind singularul e mai corect, pentru ca genereaza HTML pentru un singur produs  pe rand
-		let productsHMTL = getproductsHTML(i, productsObj);
-		productsContentWrapper.append(productsHMTL);
+	for (let i = 0; i < coatsObj.length; i++) {
+		let productsObj = coatsObj[i];
+		let productHMTL = getproductsHTML(i, productsObj);
+		productsContentWrapper.append(productHMTL);
 	}
 
 	productsContentWrapper.delegate('.single-product-wrapper', 'click', function() {
@@ -29,7 +28,7 @@ $(function() {
 		$('.item-name-wrapper').text(replaceInfo.name);
 		$('.item-price-wrapper').text(replaceInfo.currency + replaceInfo.price);
 		$('item-composition-wrapper div').text(replaceInfo.composition);
-        $('.item-country-wrapper div').text(replaceInfo.country);
+		$('.item-country-wrapper div').text(replaceInfo.country);
 		$('.item-care-wrapper div').text(replaceInfo.care);
 		overlay.fadeIn();
 	});
@@ -37,4 +36,14 @@ $(function() {
 	btnClose.click(function() {
 		overlay.fadeOut();
 	});
+});
+
+$(function() {
+	const categoryNames = $('.category-name');
+
+
+		categoryNames.click(function() {
+			categoryNames.removeClass('selected');
+			$(this).addClass('selected').siblings()
+		});
 });
